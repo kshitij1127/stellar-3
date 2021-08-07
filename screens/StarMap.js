@@ -13,7 +13,7 @@ export default class StarMap extends React.Component {
   }
 
   render() {
-    const path = `https://virtualsky.lco.global/embed/index.html?longitude=${this.state.longitude}&latitude=${this.state.latitude}&constellations=true&constellationlabels=true&showstarlabels=true&gridlines_az=true&live=true`
+   const { longitude, latitude } = this.state; const path = `https://virtualsky.lco.global/embed/index.html?longitude=${longitude}&latitude=${latitude}&constellations=true&constellationlabels=true&showstarlabels=true&gridlines_az=true&live=true&projection=stereo&showdate=false&showposition=false`
     return (
       <View style={styles.container}>
         <Text>Star Map Screen!</Text>
